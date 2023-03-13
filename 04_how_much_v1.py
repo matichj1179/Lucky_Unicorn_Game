@@ -6,10 +6,10 @@ def num_check(question, low, high):
     while not valid:
         try:
             # ask the question
-            response = int(input("question "))
+            response = int(input(question ))
             # if the amount is too low / too high give
             if low < response <= high:
-             return response
+                return response
 
             # output an error
             else:
@@ -18,6 +18,7 @@ def num_check(question, low, high):
         except ValueError:
             print(error)
 
+
 # Main routine goes here
 how_much = num_check("How much would you like to play with? ", 0, 10)
-
+print(f'You chose ${how_much:.2f}')

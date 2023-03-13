@@ -59,3 +59,4 @@ print("program continues")
 # Ask user how much the want to play with
 how_much = num_check("How much would you like to play with? ", 0, 10)
 print(f'You chose ${how_much:.2f}')
+

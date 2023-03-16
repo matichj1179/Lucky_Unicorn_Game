@@ -11,9 +11,13 @@ for item in range(0, 10):
     chosen_num = random.randint(1, 100)
 
     # Adjust balance
+    # if the random # is between 1 and 5,
+    # user gets a unicorn (add $4 to balance)
     if 1 <= chosen_num <= 5:
         chosen = "unicorn"
         balance += 4
+    # if the random # is between 6 and 36
+    # user gets a zebra (subtract $1 from balance)
     elif 6 <= chosen_num <= 36:
         chosen = "donkey"
         balance -= 1

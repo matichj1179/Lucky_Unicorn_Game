@@ -2,7 +2,7 @@ import random
 
 # main routine goes here
 
-tokens = ["unicorn", "horse", "zebra", "donkey"]
+tokens = ["unicorn", "horse", "zebra", "donkey",  "horse", "zebra", "donkey"]
 STARTING_BALANCE = 100
 
 balance = STARTING_BALANCE

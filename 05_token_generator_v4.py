@@ -21,9 +21,15 @@ for item in range(0, 10):
     elif 6 <= chosen_num <= 36:
         chosen = "donkey"
         balance -= 1
+
+    # The token is either horse or zebra...
+    # in both cases, subtract %0.50 from the balance
     else:
+        # if the number is even, set the chosen
+        # item to a horse
         if chosen_num % 2 == 0:
             chosen = "horse"
+        # otherwise set it to a zebra
         else:
             chosen = "zebra"
         balance -= 0.5

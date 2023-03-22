@@ -21,6 +21,12 @@ def yes_no(question):
             print("please answer yes / no")
 
 
+# Display heading
+print("*************************************************")
+print("******* Welcome to the Lucky Unicorn Game *******")
+print("*************************************************")
+
+
 # Displays instructions, returns ""
 def instructions():
     print("**** How to Play ****")
@@ -83,6 +89,9 @@ while play_again == "":
     if 1 <= chosen_num <= 5:
         chosen = "unicorn"
         balance += 4
+        print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        print("!!! Congratulations you got a Unicorn!!!")
+        print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
     # if the random # is between 6 and 36
     # user gets a zebra (subtract $1 from balance)
     elif 6 <= chosen_num <= 36:

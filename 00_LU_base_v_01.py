@@ -67,9 +67,7 @@ def statement_generator(statement, decoration, lines=1):
 
 # Main Routine goes here
 # Display heading
-print("*************************************************")
-print("******* Welcome to the Lucky Unicorn Game *******")
-print("*************************************************")
+statement_generator("Welcome to lucky Unicorn ", "*", 5)
 
 # Display instructions if requested
 played_before = yes_no("have you played this game before? ")
@@ -101,14 +99,14 @@ while play_again == "":
     if 1 <= chosen_num <= 5:
         chosen = "unicorn"
         balance += 4
-        print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-        print("!!! Congratulations you got a Unicorn!!!")
-        print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        statement_generator("You got a unicorn", "!", 3)
+
     # if the random # is between 6 and 36
     # user gets a zebra (subtract $1 from balance)
     elif 6 <= chosen_num <= 36:
         chosen = "donkey"
         balance -= 1
+        statement_generator("You got Donkey", "🐎")
 
     # The token is either horse or zebra...
     # in both cases, subtract %0.50 from the balance
@@ -117,9 +115,12 @@ while play_again == "":
         # item to a horse
         if chosen_num % 2 == 0:
             chosen = "horse"
+            statement_generator("You got a Horse", "🐴")
         # otherwise set it to a zebra
         else:
             chosen = "zebra"
+            statement_generator("You got a Zebra", "🦓")
+
         balance -= 0.5
 
     print(f'You got a {chosen}, your balance is ${balance:.2f}')
@@ -130,6 +131,8 @@ while play_again == "":
     else:
         play_again = input("Press Enter to play again or 'xxx' to quit ")
 
+print()
+statement_generator("Results", "=")
 print()
 print(f'Final Balance: ${balance:.2f}')
 print("Thanks for playing")

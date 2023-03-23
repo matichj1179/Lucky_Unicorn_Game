@@ -1,6 +1,17 @@
+def statement_generator(statement, decoration, lines=1):
+    sides = decoration * 5
 
-def statement_generator(statement, decoration):
+    middle = f"{sides} {statement} {sides}"
+    top_bottom = f"{decoration * len(middle)}"
 
-    sides = decoration * 3
+    if lines == 1:
+        print(middle)
+    else:
+        print(top_bottom)
+        print(middle)
+        print(top_bottom)
 
-    statement = "{} {} {}"
+
+statement_generator("You got a unicorn", "!", 3)
+print()
+statement_generator("You got a Zebra", "🦓")

@@ -21,12 +21,6 @@ def yes_no(question):
             print("please answer yes / no")
 
 
-# Display heading
-print("*************************************************")
-print("******* Welcome to the Lucky Unicorn Game *******")
-print("*************************************************")
-
-
 # Displays instructions, returns ""
 def instructions():
     print("**** How to Play ****")
@@ -57,13 +51,31 @@ def num_check(question, low, high):
             print(error)
 
 
+def statement_generator(statement, decoration, lines=1):
+    sides = decoration * 5
+
+    middle = f"{sides} {statement} {sides}"
+    top_bottom = f"{decoration * len(middle)}"
+
+    if lines == 1:
+        print(middle)
+    else:
+        print(top_bottom)
+        print(middle)
+        print(top_bottom)
+
+
 # Main Routine goes here
+# Display heading
+print("*************************************************")
+print("******* Welcome to the Lucky Unicorn Game *******")
+print("*************************************************")
+
+# Display instructions if requested
 played_before = yes_no("have you played this game before? ")
 
 if played_before == "no":
     instructions()
-
-print("program continues")
 
 # Ask user how much the want to play with
 how_much = num_check("How much would you like to play with? ", 0, 10)
